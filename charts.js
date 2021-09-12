@@ -81,7 +81,7 @@ function buildCharts(sample) {
       y: yticks,
       type: "bar",
       orientation: "h",
-      hovertemplate: labels.slice(0,10).reverse()
+      text: labels.slice(0,10).reverse()
     }];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
@@ -89,10 +89,32 @@ function buildCharts(sample) {
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
-    console.log(sample_result);
-    console.log(values);
-    console.log(sample_result.sample_values.sort((a,b) => a-b).reverse().slice(0,10))
-    console.log(yticks)
+    
+
+    // 1. Create the trace for the bubble chart.
+    var bubbleData = [{
+     x: ids,
+     y: values,
+     text: labels,
+     mode: "markers",
+     marker: {
+       size: values,
+       color: ids,
+       colorscale: "Earth"
+     }
+    }];
+
+    // 2. Create the layout for the bubble chart.
+    var bubbleLayout = {
+      width: 1200,
+      height: 600,
+      title: "Bacteria Cultures per Sample",
+      hovermode: "closest",
+      xaxis: {title:"OTU ID"}
+    };
+
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
   });
   
 }
