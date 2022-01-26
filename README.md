@@ -1,5 +1,7 @@
 # Plotly_Bacteria_Biodiversity
 
+Link to webpage: https://jhackmeyer.github.io/Plotly_Bacteria_Biodiversity/
+
 ## Purpose
 
 In this project, bacteria cultures were collected from the belly buttons of a sampling of people.  The types and prevalence of the bacteria were recorded, along with the frequency with which each subject washed their belly button.  Here, we attempt to visualize this data on a webpage using html, javascript, and json.
@@ -11,3 +13,4 @@ We successfully generated a bar graph, a bubble graph, and a gauge graph on a we
 We went a bit further, customizing some of the page's format.  This included adding a background image, adjusting the font to make the title legible, and altering the background color to match.
 
 ![Bacteria_webpage](/images/bacteria_webpage.jpg)
+You can find the interactive webpage here: https://jhackmeyer.github.io/Plotly_Bacteria_Biodiversity/
